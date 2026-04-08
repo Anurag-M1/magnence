@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import type { MouseEvent } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -77,7 +78,7 @@ export function GlassmorphismNav() {
           <div className="flex items-center justify-between">
             <Link
               href="/"
-              onClick={(event) => {
+              onClick={(event: MouseEvent<HTMLAnchorElement>) => {
                 if (pathname === "/") {
                   event.preventDefault();
                   scrollToTop();
