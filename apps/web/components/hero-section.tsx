@@ -37,9 +37,9 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto max-w-4xl text-center animate-fade-in-hero">
         <div className="mb-8 mt-12 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-md animate-fade-in-badge">
           <span className="mr-2 h-2 w-2 animate-pulse rounded-full bg-white/60"></span>
-          <span>Build</span>
+          <span>Strategize</span>
           <span className="mx-3 h-2 w-2 rounded-full bg-white/60" />
-          <span>Ship</span>
+          <span>Automate</span>
           <span className="mx-3 h-2 w-2 rounded-full bg-white/60" />
           <span>Scale</span>
         </div>
@@ -50,7 +50,7 @@ export function HeroSection() {
           <span className="mt-4 inline-flex flex-wrap items-center justify-center gap-2 sm:mt-6 md:mt-8">
             <span className="text-white">Next</span>
             <RotatingText
-              texts={["Digital Platform", "Corporate Website", "Brand Experience", "Commerce Experience", "Delivery Partner"]}
+              texts={["AI Platform", "Intelligent Website", "Automation System", "Digital Product", "Technology Partner"]}
               mainClassName="px-2 sm:px-2 md:px-3 bg-white text-black overflow-hidden py-1 sm:py-1 md:py-2 justify-center rounded-lg shadow-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
@@ -65,8 +65,8 @@ export function HeroSection() {
         </h1>
 
         <p className="mx-auto mb-8 max-w-sm px-4 text-base font-light leading-relaxed text-white text-balance sm:mb-12 sm:max-w-3xl sm:px-0 sm:text-xl md:text-2xl animate-fade-in-subheading">
-          Magnence Professional Services provides web apps, business websites, IT development, UI/UX design, editing,
-          brand content, maintenance, and freelance delivery support for modern companies.
+          Magnence is an AI-led technology services company building intelligent websites, automation workflows, web
+          apps, digital products, and growth systems for modern businesses.
         </p>
 
         <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:mb-10 sm:flex-row animate-fade-in-buttons">
@@ -95,7 +95,7 @@ export function HeroSection() {
         </div>
 
         <div className="hidden overflow-hidden px-4 text-center sm:block animate-fade-in-trust">
-          <p className="mb-4 text-sm text-white/90">Trusted by operators, founders, and brands that expect disciplined execution</p>
+          <p className="mb-4 text-sm text-white/90">Trusted by operators, founders, and brands that expect disciplined AI-led execution</p>
           <div className="relative mx-auto w-full max-w-4xl space-y-3 overflow-hidden">
             <div className="flex animate-slide-left items-center gap-4 text-white transition-all duration-500">
               {[audienceGroups, audienceGroups].map((group, groupIndex) => (
@@ -123,7 +123,7 @@ export function HeroSection() {
         </div>
 
         <div className="mb-4 overflow-hidden px-4 text-center sm:hidden animate-fade-in-trust">
-          <p className="mb-4 text-sm text-white/90">For teams that expect disciplined execution</p>
+          <p className="mb-4 text-sm text-white/90">For teams that expect disciplined AI-led execution</p>
           <div className="relative mx-auto w-full max-w-sm space-y-3 overflow-hidden">
             <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-8 bg-gradient-to-r from-black to-transparent"></div>
             <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-8 bg-gradient-to-l from-black to-transparent"></div>

@@ -327,47 +327,47 @@ const features = [
   {
     title: "Business Websites",
     description:
-      "Premium company websites, landing pages, and digital brand surfaces built to clarify your offer and capture stronger inquiries.",
+      "AI-led company websites, landing pages, and digital brand surfaces built to improve discovery, trust, and qualified enquiries.",
     demo: AnimatedChatDemo,
     size: "large",
   },
   {
     title: "Content & Copy",
     description:
-      "Messaging cleanup, service-page writing, and editorial support that makes your business easier to understand and easier to trust.",
+      "AI-assisted messaging systems, service-page writing, and editorial support that make your business easier to understand and easier to trust.",
     demo: AnimatedPhoneDemo,
     size: "medium",
   },
   {
     title: "Maintenance & Support",
     description:
-      "Ongoing fixes, updates, technical cleanup, and retained support so your live site keeps improving after launch.",
+      "Ongoing fixes, updates, technical cleanup, monitoring, and retained support so your live systems keep improving after launch.",
     demo: AnimatedCalendarDemo,
     size: "medium",
   },
   {
     title: "Agency & Freelance Support",
     description:
-      "Flexible overflow delivery for agencies and teams that need dependable frontend, content, and launch execution support.",
+      "Flexible overflow delivery for agencies and teams that need dependable frontend, AI workflow, content, and launch execution support.",
     demo: AnimatedIntegrationsDemo,
     size: "medium",
   },
   {
     title: "Marketing & Campaign Support",
     description:
-      "Service pages, landing pages, campaign updates, and conversion-focused marketing execution for growing brands.",
+      "AI-informed service pages, campaign updates, landing systems, and conversion-focused marketing execution for growing brands.",
     demo: AnimatedEmailDemo,
     size: "medium",
   },
   {
-    title: "Launch Support & Review Cycles",
-    description: "Structured handoff support for launches, revisions, and post-review adjustments when timing matters.",
+    title: "Automation & Launch Operations",
+    description: "Structured support for automations, launches, revisions, and post-release optimization when timing matters.",
     demo: AnimatedPhoneDemo,
     size: "large",
   },
   {
-    title: "Qualified Request Flow",
-    description: "Inquiry routing and clearer service matching so incoming work lands in the right lane faster.",
+    title: "AI-Ready Request Flow",
+    description: "Inquiry routing, service matching, and operational intelligence so incoming work lands in the right lane faster.",
     demo: AnimatedLeadsDemo,
     size: "medium",
   },
@@ -376,6 +376,8 @@ const features = [
 const serviceHighlights = [
   "Business Websites",
   "Web Apps",
+  "AI Workflows",
+  "Automation",
   "UI/UX Design",
   "Content & Copy",
   "Landing Pages",
@@ -453,17 +455,17 @@ export function FeaturesSection() {
               <svg className="mr-2 h-4 w-4 text-slate-600" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V7H1V9H3V15H1V17H3V21C3 22.11 3.89 23 5 23H19C20.11 23 21 22.11 21 21V17H23V15H21V9H23ZM19 9V15H5V9H19ZM7.5 11.5C7.5 10.67 8.17 10 9 10S10.5 10.67 10.5 11.5 9.83 13 9 13 7.5 12.33 7.5 11.5ZM13.5 11.5C13.5 10.67 14.17 10 15 10S16.5 10.67 16.5 11.5 15.83 13 15 13 13.5 12.33 13.5 11.5ZM12 16C13.11 16 14.08 16.59 14.71 17.5H9.29C9.92 16.59 10.89 16 12 16Z" />
               </svg>
-              Services Designed to Keep Work Moving
+              AI-Led Services Designed to Keep Work Moving
             </div>
             <h2 className="mb-4 text-2xl font-bold text-balance text-slate-900 sm:mb-6 sm:text-3xl md:text-4xl lg:text-5xl">
-              Professional Services{" "}
+              AI-Led Technology Services{" "}
               <span className="bg-gradient-to-r from-slate-600 to-slate-400 bg-clip-text text-transparent">
-                Across Web, Design, IT & Delivery
+                Across Products, Automation, Design & Growth
               </span>
             </h2>
             <p className="mx-auto max-w-3xl text-base font-light leading-relaxed text-slate-600 sm:text-lg md:text-xl">
-              Magnence supports businesses with websites, web apps, design, content, ecommerce, maintenance,
-              technical support, marketing execution, and ongoing digital delivery in one clear workflow.
+              Magnence supports businesses with intelligent websites, web apps, AI workflows, automation systems,
+              design, growth infrastructure, and ongoing technical delivery in one clear workflow.
             </p>
           </div>
 

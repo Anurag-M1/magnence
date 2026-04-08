@@ -19,10 +19,10 @@ export default function ContactPage() {
         <div className="max-w-4xl">
           <p className="text-sm tracking-[0.3em] text-white/45 uppercase">Contact</p>
           <h1 className="mt-4 text-4xl font-light tracking-tight text-white md:text-6xl">
-            Start with inquiry in the <span className="font-medium italic">same rhythm as the work</span>
+            Start with inquiry in the <span className="font-medium italic">same rhythm as the AI-led work</span>
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/68">
-            Use this page to start a project, ask for support, request a download build, or open a commercial conversation with Magnence.
+            Use this page to start an AI-led website, automation workflow, web app, support request, or strategic technology conversation with Magnence.
           </p>
         </div>
 
@@ -31,7 +31,7 @@ export default function ContactPage() {
             <div className="rounded-[1.75rem] border border-white/12 bg-white/[0.05] p-6 backdrop-blur-md">
               <p className="text-xs tracking-[0.24em] text-white/70 uppercase">Enquiry routing</p>
               <p className="mt-4 text-sm leading-8 text-white/82">
-                Sending this form opens an email enquiry addressed to <span className="font-semibold">{companyInfo.supportEmail}</span> so your details land in the right inbox immediately.
+                Sending this form opens an email enquiry addressed to <span className="font-semibold">{companyInfo.supportEmail}</span> so AI, product, automation, and support requests land in the right inbox immediately.
               </p>
             </div>
 

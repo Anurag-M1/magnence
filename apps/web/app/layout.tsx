@@ -16,11 +16,11 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Magnence | Software Agency Platform",
+    default: "Magnence | AI-Led Technology Services Company",
     template: "%s | Magnence",
   },
   description:
-    "Secure full-stack delivery partner for web apps, CRM, booking, ecommerce, and end-to-end digital products.",
+    "AI-led technology services company building intelligent websites, web apps, automation systems, and scalable digital products.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"),
 };
 

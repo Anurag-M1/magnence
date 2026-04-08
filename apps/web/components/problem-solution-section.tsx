@@ -67,11 +67,11 @@ export function ProblemSolutionSection() {
             Why Businesses Choose Magnence
           </div>
           <h2 className="mb-4 text-2xl font-bold text-balance text-white sm:mb-6 sm:text-3xl md:text-4xl lg:text-5xl">
-            Professional digital delivery for brands that value <span className="text-white">clarity, speed, and consistency</span>
+            AI-led technology delivery for brands that value <span className="text-white">clarity, speed, and consistency</span>
           </h2>
           <p className="mx-auto max-w-3xl text-base font-light leading-relaxed text-white/70 sm:text-lg md:text-xl">
-            Magnence supports companies that need a polished online presence, dependable execution, and ongoing digital
-            support without the friction of fragmented vendors or unclear delivery.
+            Magnence supports companies that need intelligent websites, AI-enabled workflows, dependable execution,
+            and ongoing optimization without the friction of fragmented vendors or unclear delivery.
           </p>
         </div>
 
@@ -82,13 +82,13 @@ export function ProblemSolutionSection() {
                 <div className="rounded-lg bg-white/10 p-2">
                   <AlertTriangle />
                 </div>
-                <h3 className="text-xl font-bold text-white sm:text-2xl">Where Businesses Lose Momentum</h3>
+                <h3 className="text-xl font-bold text-white sm:text-2xl">Where Businesses Lose Technology Momentum</h3>
               </div>
 
               <div className="mb-6 rounded-xl border border-white/12 bg-white/6 p-4 backdrop-blur-sm sm:p-6">
                 <div className="mb-2 text-3xl font-bold text-white sm:text-4xl">Execution Gaps</div>
                 <p className="text-sm text-white/80 sm:text-base">
-                  appear when digital work is delayed, inconsistently managed, or split across too many moving parts
+                  appear when AI, product, content, and engineering work are delayed, inconsistently managed, or split across too many moving parts
                 </p>
               </div>
 
@@ -96,19 +96,19 @@ export function ProblemSolutionSection() {
                 <div className="flex items-start gap-3">
                   <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-white/65"></div>
                   <p className="text-sm text-white/70 sm:text-base">
-                    Website updates and product improvements compete with day-to-day operational priorities
+                    Product improvements, website changes, and automation opportunities compete with day-to-day operational priorities
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-white/65"></div>
                   <p className="text-sm text-white/70 sm:text-base">
-                    Teams spend valuable time coordinating edits, revisions, and follow-ups instead of core business work
+                    Teams spend valuable time coordinating tools, prompts, edits, integrations, and follow-ups instead of core business work
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-white/65"></div>
                   <p className="text-sm text-white/70 sm:text-base">
-                    Digital quality declines when nobody owns long-term maintenance, consistency, or delivery standards
+                    Quality declines when nobody owns long-term maintenance, AI governance, consistency, or delivery standards
                   </p>
                 </div>
               </div>
@@ -125,9 +125,9 @@ export function ProblemSolutionSection() {
               </div>
 
               <div className="mb-6 rounded-xl border border-slate-300/20 bg-slate-400/10 p-4 backdrop-blur-sm sm:p-6">
-                <div className="mb-2 text-3xl font-bold text-slate-200 sm:text-4xl">Structured Delivery</div>
+                <div className="mb-2 text-3xl font-bold text-slate-200 sm:text-4xl">Structured AI-Led Delivery</div>
                 <p className="text-sm text-white/80 sm:text-base">
-                  across design, development, content refinement, maintenance, and ongoing execution support
+                  across strategy, automation, product engineering, design, content refinement, and ongoing execution support
                 </p>
               </div>
 
@@ -135,19 +135,19 @@ export function ProblemSolutionSection() {
                 <div className="flex items-start gap-3">
                   <CheckCircle />
                   <p className="text-sm text-white/70 sm:text-base">
-                    Professional websites, interfaces, and digital improvements delivered with speed and polish
+                    Intelligent websites, interfaces, and digital systems delivered with speed and polish
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle />
                   <p className="text-sm text-white/70 sm:text-base">
-                    Clear messaging, refined content, and stronger presentation aligned with your brand and market
+                    Clear messaging, refined content, automation opportunities, and stronger presentation aligned with your market
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle />
                   <p className="text-sm text-white/70 sm:text-base">
-                    Reliable post-launch support through updates, fixes, optimization, and maintenance
+                    Reliable post-launch support through updates, fixes, optimization, maintenance, and AI workflow improvement
                   </p>
                 </div>
               </div>
@@ -158,25 +158,25 @@ export function ProblemSolutionSection() {
         <div className={`mb-12 grid grid-cols-1 gap-4 transition-all duration-1000 delay-600 sm:mb-16 sm:grid-cols-3 sm:gap-6 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
           <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center transition-all duration-300 hover:bg-white/10 sm:p-6">
             <div className="mb-2 text-2xl font-bold text-white sm:text-3xl">Fast</div>
-            <p className="text-xs text-white/70 sm:text-sm">turnaround on practical digital work</p>
+            <p className="text-xs text-white/70 sm:text-sm">turnaround on practical technology work</p>
           </div>
           <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center transition-all duration-300 hover:bg-white/10 sm:p-6">
             <div className="mb-2 text-2xl font-bold text-white sm:text-3xl">Clean</div>
-            <p className="text-xs text-white/70 sm:text-sm">delivery across design, code, and content</p>
+            <p className="text-xs text-white/70 sm:text-sm">delivery across AI, product, design, and code</p>
           </div>
           <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center transition-all duration-300 hover:bg-white/10 sm:p-6">
             <div className="mb-2 text-2xl font-bold text-white sm:text-3xl">Ongoing</div>
-            <p className="text-xs text-white/70 sm:text-sm">support when your site or content needs care</p>
+            <p className="text-xs text-white/70 sm:text-sm">support when your systems, site, or workflows need care</p>
           </div>
         </div>
 
         <div className={`rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md transition-all duration-1000 delay-900 sm:p-8 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
           <h3 className="mb-3 text-xl font-bold text-balance text-white sm:mb-4 sm:text-2xl md:text-3xl">
-            Built for businesses that expect professional execution
+            Built for businesses that expect modern AI-led execution
           </h3>
           <p className="mx-auto mb-6 max-w-2xl text-sm font-light leading-relaxed text-white/70 sm:mb-8 sm:text-base md:text-lg">
-            If your company needs stronger digital presentation, dependable delivery, and ongoing support, Magnence is
-            positioned to step in with clarity and accountability.
+            If your company needs stronger digital presentation, automation opportunities, dependable delivery, and
+            ongoing support, Magnence is positioned to step in with clarity and accountability.
           </p>
           <Button
             size="lg"

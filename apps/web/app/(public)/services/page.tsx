@@ -5,16 +5,16 @@ import { servicePages } from "@/lib/site-data";
 
 const serviceSections = [
   {
-    title: "Web & Product Delivery",
-    items: ["Business Websites", "Web Apps", "Landing Pages", "Ecommerce", "CRM Setup", "Business Platforms"],
+    title: "Web, Product & AI Delivery",
+    items: ["Business Websites", "Web Apps", "AI Platforms", "Landing Pages", "Ecommerce", "Business Platforms"],
   },
   {
-    title: "Brand & Experience",
+    title: "Brand, Experience & Interfaces",
     items: ["UI/UX Design", "Content & Copy", "Editing", "Brand Communication", "Design Systems", "Campaign Design"],
   },
   {
-    title: "Support & Growth",
-    items: ["Maintenance", "Technical Support", "Marketing Support", "IT Consulting", "Digital Advisory", "Agency & Freelance Support"],
+    title: "Automation, Support & Growth",
+    items: ["AI Workflows", "Automation", "Maintenance", "Technical Support", "Marketing Support", "Agency & Freelance Support"],
   },
 ];
 
@@ -25,10 +25,10 @@ export default function ServicesPage() {
         <div className="max-w-4xl">
           <p className="text-sm tracking-[0.3em] text-white/45 uppercase">Services</p>
           <h1 className="mt-4 text-4xl font-light tracking-tight text-white md:text-6xl">
-            Service lines designed to <span className="font-medium italic">move commercial work forward</span>
+            AI-led technology services designed to <span className="font-medium italic">move commercial work forward</span>
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/68">
-            Magnence focuses on the core areas where companies usually lose momentum: website clarity, content quality, launch follow-through, and reliable ongoing support.
+            Magnence focuses on the core areas where companies usually lose momentum: product clarity, automation opportunities, intelligent customer journeys, launch follow-through, and reliable ongoing support.
           </p>
         </div>
 
@@ -74,15 +74,15 @@ export default function ServicesPage() {
           {[
             {
               title: "Business-facing work",
-              text: "Best for teams that need stronger positioning, cleaner service communication, and a more credible public presence.",
+              text: "Best for teams that need stronger positioning, AI-ready customer journeys, cleaner service communication, and a more credible public presence.",
             },
             {
               title: "Operational support",
-              text: "Best for companies already live but struggling with updates, revisions, technical follow-through, or inconsistent website quality.",
+              text: "Best for companies already live but struggling with updates, automations, technical follow-through, or inconsistent digital system quality.",
             },
             {
               title: "Overflow capacity",
-              text: "Best for agencies, studios, and founders who need reliable extra hands without slowing delivery or quality.",
+              text: "Best for agencies, studios, and founders who need reliable AI-capable extra hands without slowing delivery or quality.",
             },
           ].map((item) => (
             <section key={item.title} className="rounded-[1.75rem] border border-white/12 bg-white/[0.04] p-6 backdrop-blur-md">

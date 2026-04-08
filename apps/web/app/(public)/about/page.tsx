@@ -8,10 +8,10 @@ export default function AboutPage() {
         <div className="max-w-4xl">
           <p className="text-sm tracking-[0.3em] text-white/45 uppercase">About Magnence</p>
           <h1 className="mt-4 text-4xl font-light tracking-tight text-white md:text-6xl">
-            A focused digital partner for brands that need <span className="font-medium italic">clarity, polish, and follow-through</span>
+            An AI-led technology partner for brands that need <span className="font-medium italic">clarity, automation, and follow-through</span>
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/68">
-            Magnence combines website execution, content refinement, launch support, and ongoing maintenance into one delivery rhythm. We help teams look sharper online and stay operational after launch.
+            Magnence combines strategy, intelligent websites, product engineering, automation, content refinement, and ongoing optimization into one delivery rhythm. We help teams modernize how they present, operate, and scale.
           </p>
         </div>
 
@@ -19,10 +19,10 @@ export default function AboutPage() {
           <section className="rounded-[1.75rem] border border-white/12 bg-white/[0.05] p-6 backdrop-blur-md">
             <h2 className="text-lg font-semibold text-white">What we do</h2>
             <ul className="mt-4 space-y-3 text-sm leading-7 text-white/66">
-              <li>Build premium business websites and campaign-ready digital pages.</li>
-              <li>Refine messaging, service copy, and brand communication.</li>
-              <li>Support live websites through revisions, fixes, and long-term care.</li>
-              <li>Step in as a flexible delivery partner for agencies and internal teams.</li>
+              <li>Build AI-led business websites, digital products, and modern web applications.</li>
+              <li>Design automation workflows, intelligent customer journeys, and operational systems.</li>
+              <li>Refine messaging, service copy, brand communication, and AI-assisted content systems.</li>
+              <li>Support live platforms through revisions, fixes, optimization, and long-term technical care.</li>
             </ul>
           </section>
 
@@ -31,8 +31,8 @@ export default function AboutPage() {
             <ul className="mt-4 space-y-3 text-sm leading-7 text-white/66">
               <li>Base location: {companyInfo.location}</li>
               <li>Support window: {companyInfo.availability}</li>
-              <li>Collaboration model: remote-first with structured reviews and handoffs.</li>
-              <li>Best fit: service companies, agencies, operators, and teams under launch pressure.</li>
+              <li>Collaboration model: remote-first with structured reviews, AI workflow planning, and clear handoffs.</li>
+              <li>Best fit: service companies, agencies, operators, and growth-stage teams modernizing with AI.</li>
             </ul>
           </section>
         </div>
@@ -41,15 +41,15 @@ export default function AboutPage() {
           {[
             {
               title: "How we operate",
-              text: "We keep delivery simple: clear scope, visible checkpoints, responsive revisions, and practical support once the site is live.",
+              text: "We keep delivery simple: clear scope, visible checkpoints, responsible AI usage, responsive revisions, and practical support once the system is live.",
             },
             {
               title: "What clients value",
-              text: "Clients usually come to Magnence when they need stronger presentation, faster updates, cleaner delivery quality, or steadier launch support.",
+              text: "Clients usually come to Magnence when they need stronger product thinking, better automation, faster updates, cleaner delivery quality, or steadier launch support.",
             },
             {
               title: "What we avoid",
-              text: "We do not hide behind vague process. We prefer direct communication, reviewable work, and realistic delivery commitments that can actually be maintained.",
+              text: "We do not hide behind vague AI claims or vague process. We prefer direct communication, reviewable work, and realistic delivery commitments that can actually be maintained.",
             },
           ].map((item) => (
             <section key={item.title} className="rounded-[1.75rem] border border-white/12 bg-white/[0.04] p-6 backdrop-blur-md">
@@ -63,10 +63,10 @@ export default function AboutPage() {
           <div className="max-w-4xl">
             <p className="text-xs tracking-[0.24em] text-white/45 uppercase">Why Magnence</p>
             <h2 className="mt-4 text-3xl font-light text-white sm:text-4xl">
-              Built for teams that need <span className="font-medium italic">one reliable partner instead of scattered follow-ups</span>
+              Built for teams that need <span className="font-medium italic">one reliable AI-led technology partner instead of scattered vendors</span>
             </h2>
             <p className="mt-5 text-base leading-8 text-white/68">
-              Magnence is strongest when a business needs websites, content, campaign support, updates, and technical execution to move in one consistent rhythm. That is where the quality gap usually shows up, and where we help close it.
+              Magnence is strongest when a business needs strategy, websites, automation, content, campaign support, and technical execution to move in one consistent rhythm. That is where the quality gap usually shows up, and where we help close it.
             </p>
           </div>
         </section>

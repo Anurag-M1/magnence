@@ -56,7 +56,7 @@ export function Footer() {
             <div>
               <p className="text-sm tracking-[0.25em] text-white/50 uppercase">Magnence</p>
               <h2 className="mt-3 max-w-xl text-3xl font-light tracking-tight sm:text-4xl">
-                Digital delivery for brands that want stronger websites, sharper communication, and dependable support.
+                AI-led technology services for brands that want intelligent websites, automation, stronger digital products, and dependable support.
               </h2>
             </div>
 
