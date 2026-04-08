@@ -1,0 +1,423 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                 String          @id @default(cuid())
+  email              String          @unique
+  name               String?
+  role               Role            @default(CLIENT)
+  passwordHash       String?
+  avatar             String?
+  phone              String?
+  phoneEncrypted     String?
+  emailVerified      Boolean         @default(false)
+  twoFactorEnabled   Boolean         @default(false)
+  twoFactorSecret    String?
+  passwordChangedAt  DateTime        @default(now())
+  tokenVersion       Int             @default(0)
+  apiKeyVersion      Int             @default(1)
+  failedLoginAttempts Int            @default(0)
+  lockedUntil        DateTime?
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+  sessions           Session[]
+  refreshTokens      RefreshToken[]
+  twoFactorBackupCodes TwoFactorBackupCode[]
+  accounts           Account[]
+  authenticators     Authenticator[]
+  assignedLeads      Lead[]          @relation("LeadAssignee")
+  bookings           Appointment[]   @relation("UserAppointments")
+  projects           Project[]       @relation("ClientProjects")
+  invoices           Invoice[]       @relation("ClientInvoices")
+  notifications      Notification[]
+  taskAssignments    Task[]          @relation("TaskAssignee")
+  leadNotes          LeadNote[]      @relation("LeadNoteAuthor")
+  uploadedDocuments  Document[]      @relation("UploadedDocuments")
+  rotatedApiKeys     IntegrationApiKey[]
+}
+
+enum Role {
+  SUPER_ADMIN
+  ADMIN
+  TEAM_MEMBER
+  CLIENT
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  refreshToken String?  @unique
+  userId       String
+  expires      DateTime
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Authenticator {
+  credentialID         String  @unique
+  userId               String
+  providerAccountId    String
+  credentialPublicKey  String
+  counter              Int
+  credentialDeviceType String
+  credentialBackedUp   Boolean
+  transports           String?
+  user                 User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, credentialID])
+}
+
+model Lead {
+  id           String        @id @default(cuid())
+  name         String
+  email        String
+  phone        String?
+  phoneEncrypted String?
+  company      String?
+  service      ServiceType
+  budget       String?
+  message      String
+  status       LeadStatus    @default(NEW)
+  source       String?
+  assignedTo   User?         @relation("LeadAssignee", fields: [assignedId], references: [id], onDelete: SetNull)
+  assignedId   String?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  notes        LeadNote[]
+  appointments Appointment[]
+
+  @@index([status, createdAt])
+  @@index([assignedId])
+  @@index([email])
+}
+
+model RefreshToken {
+  id               String   @id @default(cuid())
+  userId           String
+  tokenHash        String   @unique
+  family           String
+  expiresAt        DateTime
+  revokedAt        DateTime?
+  replacedByTokenId String?
+  createdAt        DateTime @default(now())
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  replacedBy       RefreshToken? @relation("RefreshReplacement", fields: [replacedByTokenId], references: [id], onDelete: SetNull)
+  replaces         RefreshToken[] @relation("RefreshReplacement")
+
+  @@index([userId, family])
+  @@index([expiresAt])
+}
+
+model TwoFactorBackupCode {
+  id        String   @id @default(cuid())
+  userId    String
+  codeHash  String
+  usedAt    DateTime?
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, usedAt])
+}
+
+model IntegrationApiKey {
+  id          String   @id @default(cuid())
+  service     String
+  keyHash     String
+  version     Int
+  active      Boolean  @default(true)
+  rotatedById String?
+  createdAt   DateTime @default(now())
+  rotatedAt   DateTime?
+  rotatedBy   User?    @relation(fields: [rotatedById], references: [id], onDelete: SetNull)
+
+  @@index([service, active])
+  @@unique([service, version])
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  PROPOSAL
+  NEGOTIATION
+  WON
+  LOST
+}
+
+enum ServiceType {
+  WEB_APP
+  WEBSITE
+  BUSINESS_PLATFORM
+  UI_UX_DESIGN
+  LANDING_PAGE
+  ECOMMERCE
+  COPYWRITING
+  EDITING
+  BRAND_COMMUNICATION
+  MAINTENANCE
+  TECHNICAL_SUPPORT
+  CRM_SETUP
+  IT_CONSULTING
+  DIGITAL_ADVISORY
+  FREELANCE_SUPPORT
+  END_TO_END_DELIVERY
+  CAMPAIGN_DESIGN
+}
+
+model LeadNote {
+  id        String   @id @default(cuid())
+  body      String
+  leadId    String
+  authorId  String?
+  createdAt DateTime @default(now())
+  lead      Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  author    User?    @relation("LeadNoteAuthor", fields: [authorId], references: [id], onDelete: SetNull)
+
+  @@index([leadId, createdAt])
+}
+
+model Appointment {
+  id        String            @id @default(cuid())
+  title     String
+  type      AppointmentType
+  status    AppointmentStatus @default(PENDING)
+  startTime DateTime
+  endTime   DateTime
+  timezone  String
+  meetLink  String?
+  notes     String?
+  leadId    String?
+  userId    String
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
+  lead      Lead?             @relation(fields: [leadId], references: [id], onDelete: SetNull)
+  user      User              @relation("UserAppointments", fields: [userId], references: [id], onDelete: Cascade)
+  reminders Reminder[]
+
+  @@index([userId, startTime])
+  @@index([leadId])
+}
+
+enum AppointmentType {
+  DISCOVERY
+  CONSULTATION
+  REVIEW
+  SUPPORT
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+  RESCHEDULED
+}
+
+model Reminder {
+  id            String   @id @default(cuid())
+  appointmentId String
+  runAt         DateTime
+  sentAt        DateTime?
+  channel       Channel  @default(EMAIL)
+  appointment   Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+
+  @@index([appointmentId, runAt])
+}
+
+model Project {
+  id          String        @id @default(cuid())
+  name        String
+  description String?
+  status      ProjectStatus @default(BRIEFING)
+  service     ServiceType
+  startDate   DateTime?
+  deadline    DateTime?
+  budget      Decimal?
+  clientId    String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  client      User          @relation("ClientProjects", fields: [clientId], references: [id], onDelete: Cascade)
+  tasks       Task[]
+  milestones  Milestone[]
+  documents   Document[]
+  invoices    Invoice[]
+
+  @@index([clientId, status])
+}
+
+enum ProjectStatus {
+  BRIEFING
+  PROPOSAL
+  APPROVED
+  IN_PROGRESS
+  REVIEW
+  REVISION
+  COMPLETED
+  PAUSED
+}
+
+model Milestone {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  dueDate     DateTime?
+  completedAt DateTime?
+  projectId   String
+  createdAt   DateTime @default(now())
+  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId, dueDate])
+}
+
+model Task {
+  id          String     @id @default(cuid())
+  title       String
+  description String?
+  status      TaskStatus @default(TODO)
+  priority    Priority   @default(MEDIUM)
+  dueDate     DateTime?
+  projectId   String
+  assigneeId  String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  project     Project    @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  assignee    User?      @relation("TaskAssignee", fields: [assigneeId], references: [id], onDelete: SetNull)
+
+  @@index([projectId, status])
+  @@index([assigneeId, status])
+}
+
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  IN_REVIEW
+  DONE
+  BLOCKED
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+model Document {
+  id           String   @id @default(cuid())
+  projectId    String
+  name         String
+  url          String
+  mimeType     String?
+  size         Int?
+  uploadedById String?
+  expiresAt    DateTime?
+  createdAt    DateTime @default(now())
+  project      Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  uploadedBy   User?    @relation("UploadedDocuments", fields: [uploadedById], references: [id], onDelete: SetNull)
+
+  @@index([projectId, createdAt])
+}
+
+model Invoice {
+  id        String        @id @default(cuid())
+  number    String        @unique
+  status    InvoiceStatus @default(DRAFT)
+  amount    Decimal
+  currency  String        @default("USD")
+  dueDate   DateTime
+  paidAt    DateTime?
+  stripeId  String?
+  projectId String?
+  clientId  String
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  project   Project?      @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  client    User          @relation("ClientInvoices", fields: [clientId], references: [id], onDelete: Cascade)
+  items     InvoiceItem[]
+
+  @@index([clientId, status])
+  @@index([projectId])
+}
+
+enum InvoiceStatus {
+  DRAFT
+  SENT
+  PAID
+  OVERDUE
+  CANCELLED
+}
+
+model InvoiceItem {
+  id          String   @id @default(cuid())
+  description String
+  quantity    Int
+  unitPrice   Decimal
+  invoiceId   String
+  invoice     Invoice  @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+}
+
+model Notification {
+  id        String    @id @default(cuid())
+  userId    String
+  title     String
+  body      String
+  type      NotifType
+  read      Boolean   @default(false)
+  channel   Channel[]
+  createdAt DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, read, createdAt])
+}
+
+enum NotifType {
+  APPOINTMENT
+  LEAD
+  PROJECT
+  INVOICE
+  SYSTEM
+}
+
+enum Channel {
+  EMAIL
+  WHATSAPP
+  SMS
+  IN_APP
+  PUSH
+}

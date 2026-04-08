@@ -1,0 +1,41 @@
+{
+  "name": "@magnence/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "NEXT_IGNORE_INCORRECT_LOCKFILE=1 next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@magnence/types": "0.1.0",
+    "@magnence/ui": "0.1.0",
+    "@tanstack/react-query": "^5.90.2",
+    "@trpc/client": "^11.7.1",
+    "@trpc/react-query": "^11.7.1",
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.454.0",
+    "next": "14.2.35",
+    "ogl": "1.0.11",
+    "react-dom": "^18",
+    "react-hook-form": "^7.65.0",
+    "superjson": "^2.2.2",
+    "zod": "^4.1.12",
+    "zustand": "^5.0.8",
+    "react": "^18"
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35"
+  }
+}

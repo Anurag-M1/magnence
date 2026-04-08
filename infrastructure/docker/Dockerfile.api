@@ -1,0 +1,19 @@
+FROM node:20-alpine AS base
+WORKDIR /app
+
+COPY package.json ./
+COPY apps/api/package.json ./apps/api/package.json
+COPY packages/db/package.json ./packages/db/package.json
+COPY packages/types/package.json ./packages/types/package.json
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build --workspace=@magnence/types \
+  && npm run build --workspace=@magnence/db \
+  && npm run build --workspace=@magnence/api
+
+WORKDIR /app/apps/api
+EXPOSE 4000
+CMD ["npm", "run", "start"]
