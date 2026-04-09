@@ -1,10 +1,10 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { contactSubmissionSchema } from "@magnence/types";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import type { z } from "zod";
+import { contactSubmissionSchema } from "@/lib/contact-schema";
 import { companyInfo, servicePages } from "@/lib/site-data";
 
 type ContactFormInput = z.infer<typeof contactSubmissionSchema>;

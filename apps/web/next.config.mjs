@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["@magnence/types", "@magnence/ui"],
   images: {
     formats: ["image/avif", "image/webp"],
   },

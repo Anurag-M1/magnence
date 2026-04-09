@@ -11,11 +11,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
-    "@magnence/types": "0.1.0",
-    "@magnence/ui": "0.1.0",
-    "@tanstack/react-query": "^5.90.2",
-    "@trpc/client": "^11.7.1",
-    "@trpc/react-query": "^11.7.1",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.454.0",
     "next": "14.2.35",
@@ -23,9 +18,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.65.0",
-    "superjson": "^2.2.2",
-    "zod": "^4.1.12",
-    "zustand": "^5.0.8"
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",

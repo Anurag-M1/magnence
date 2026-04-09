@@ -1,4 +1,4 @@
-import type { ServiceType } from "@magnence/types";
+import type { ServiceType } from "@/lib/contact-schema";
 
 export type NavItem = {
   href: string;
