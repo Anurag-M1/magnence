@@ -73,10 +73,19 @@ export function GlassmorphismNav() {
   const isItemActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <nav
-      ref={navRef}
-      className="fixed left-1/2 top-4 z-[70] -translate-x-1/2 animate-fade-in-nav md:top-6"
-    >
+    <>
+      {isOpen ? (
+        <button
+          type="button"
+          aria-label="Close menu overlay"
+          className="fixed inset-0 z-[60] bg-black/35 backdrop-blur-sm md:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      ) : null}
+      <nav
+        ref={navRef}
+        className="fixed left-1/2 top-4 z-[70] -translate-x-1/2 animate-fade-in-nav md:top-6"
+      >
       <div className="mx-auto w-[92vw] max-w-sm sm:max-w-xl md:max-w-5xl">
         <div className={`rounded-full px-4 py-3 md:px-6 md:py-2 ${navContainerClass}`}>
           <div className="flex items-center justify-between">
@@ -138,14 +147,7 @@ export function GlassmorphismNav() {
         </div>
       </div>
 
-      {isOpen ? (
-        <button
-          type="button"
-          aria-label="Close menu overlay"
-          className="fixed inset-0 z-[60] bg-black/35 backdrop-blur-sm md:hidden"
-          onClick={() => setIsOpen(false)}
-        />
-      ) : null}
+
 
       <div className="relative z-[71] md:hidden">
         <div
@@ -188,5 +190,6 @@ export function GlassmorphismNav() {
         </div>
       </div>
     </nav>
+    </>
   );
 }
