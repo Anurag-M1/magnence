@@ -149,11 +149,11 @@ export function GlassmorphismNav() {
 
 
 
-      <div className="absolute left-0 top-full w-full z-[71] md:hidden">
+      <div className={`absolute left-0 top-full w-full z-[71] md:hidden ${isOpen ? "pointer-events-auto" : "pointer-events-none"}`}>
         <div
           id="mobile-nav-panel"
           className={`mx-auto mt-2 w-[92vw] max-w-sm transform-gpu transition-all duration-200 ease-out ${
-            isOpen ? "translate-y-0 scale-100 opacity-100" : "pointer-events-none -translate-y-3 scale-[0.98] opacity-0"
+            isOpen ? "translate-y-0 scale-100 opacity-100" : "-translate-y-3 scale-[0.98] opacity-0"
           }`}
         >
           <div className={`rounded-2xl p-4 backdrop-blur-xl ${mobileMenuClass}`}>
