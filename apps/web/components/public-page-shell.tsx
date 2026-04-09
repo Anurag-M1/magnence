@@ -14,7 +14,7 @@ export function PublicPageShell({ children, showFooter = true, auroraSpeed = 0.7
   return (
     <div className="min-h-screen overflow-x-clip bg-black text-white">
       <main className="relative min-h-screen overflow-x-clip">
-        <div className="fixed inset-0 h-full w-full">
+        <div className="fixed inset-0 h-full w-full pointer-events-none">
           <Aurora colorStops={["#475569", "#94a3b8", "#ffffff"]} amplitude={1.1} blend={0.55} speed={auroraSpeed} />
         </div>
         <div className="relative z-10 text-white">

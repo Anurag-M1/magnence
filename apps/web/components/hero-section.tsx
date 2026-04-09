@@ -33,8 +33,8 @@ const Play = () => (
 
 export function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center px-4 pb-12 pt-8 sm:pb-16 sm:pt-12">
-      <div className="relative z-10 mx-auto max-w-5xl text-center animate-fade-in-hero">
+    <section className="relative flex flex-col items-center justify-center px-4 pb-12 pt-8 sm:pb-16 sm:pt-12 w-full overflow-hidden">
+      <div className="relative z-10 mx-auto w-full max-w-5xl text-center animate-fade-in-hero">
         <div className="mb-6 inline-flex flex-wrap items-center justify-center gap-y-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium text-white backdrop-blur-md animate-fade-in-badge sm:mb-8 sm:text-sm">
           <span className="mr-2 h-2 w-2 animate-pulse rounded-full bg-white/60"></span>
           <span>Strategize</span>
