@@ -156,7 +156,7 @@ export function GlassmorphismNav() {
         >
           <div className={`rounded-2xl p-4 backdrop-blur-xl ${mobileMenuClass}`}>
             <div className="flex flex-col space-y-1">
-              {publicNavigation.map((item, index) => (
+              {publicNavigation.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
