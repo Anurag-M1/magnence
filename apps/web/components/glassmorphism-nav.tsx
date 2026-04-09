@@ -168,10 +168,7 @@ export function GlassmorphismNav() {
                       : useLightTheme
                         ? "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
                         : "text-white/80 hover:bg-white/10 hover:text-white"
-                  } ${isOpen ? "animate-mobile-menu-item" : ""}`}
-                  style={{
-                    animationDelay: isOpen ? `${index * 80 + 100}ms` : "0ms",
-                  }}
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -180,12 +177,7 @@ export function GlassmorphismNav() {
               <div className="h-px bg-white/10 my-2" />
               <Link
                 href={enquiryFormHref}
-                className={`group relative flex items-center rounded-full bg-white px-6 py-3 font-medium text-black transition-all duration-200 hover:scale-[1.01] hover:bg-gray-50 hover:shadow-lg ${
-                  isOpen ? "animate-mobile-menu-item" : ""
-                }`}
-                style={{
-                  animationDelay: isOpen ? `${publicNavigation.length * 80 + 150}ms` : "0ms",
-                }}
+                className="group relative flex items-center rounded-full bg-white px-6 py-3 font-medium text-black transition-all duration-200 hover:scale-[1.01] hover:bg-gray-50 hover:shadow-lg"
                 onClick={() => setIsOpen(false)}
               >
                 <span className="mr-2">Start Inquiry</span>

@@ -59,7 +59,7 @@ export function ProblemSolutionSection() {
   }, []);
 
   return (
-    <section id="problem-solution" ref={sectionRef} className="relative z-10 px-4 pb-16 pt-10 sm:pb-24 sm:pt-16">
+    <section id="problem-solution" ref={sectionRef} className="relative z-10 px-4 pb-16 pt-0 sm:pb-24 sm:pt-0">
       <div className="mx-auto max-w-6xl">
         <div className={`mb-12 text-center transition-all duration-1000 sm:mb-20 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
           <div className="mb-6 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-md">

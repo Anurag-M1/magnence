@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { enquiryFormHref } from "@/lib/site-data";
+import Link from "next/link";
 import RotatingText from "./RotatingText";
-
 const audienceGroups = ["Startups", "Agencies", "Founders", "Local Brands", "Creators", "Growing Teams"];
 const projectNames = [
   "Nexora Capital",
@@ -33,9 +33,9 @@ const Play = () => (
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[88svh] items-center justify-center px-4 pb-8 pt-20 sm:min-h-[92vh] sm:pb-10 sm:pt-24">
+    <section className="relative flex flex-col items-center justify-center px-4 pb-12 pt-8 sm:pb-16 sm:pt-12">
       <div className="relative z-10 mx-auto max-w-5xl text-center animate-fade-in-hero">
-        <div className="mb-6 mt-10 inline-flex flex-wrap items-center justify-center gap-y-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium text-white backdrop-blur-md animate-fade-in-badge sm:mb-8 sm:mt-12 sm:text-sm">
+        <div className="mb-6 inline-flex flex-wrap items-center justify-center gap-y-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium text-white backdrop-blur-md animate-fade-in-badge sm:mb-8 sm:text-sm">
           <span className="mr-2 h-2 w-2 animate-pulse rounded-full bg-white/60"></span>
           <span>Strategize</span>
           <span className="mx-3 h-2 w-2 rounded-full bg-white/60" />
@@ -75,10 +75,10 @@ export function HeroSection() {
             className="group relative w-full cursor-pointer overflow-hidden rounded-full bg-white px-8 py-4 text-lg font-medium text-black transition-all duration-300 hover:scale-105 hover:bg-gray-50 hover:shadow-lg sm:w-auto"
             asChild
           >
-            <a href={enquiryFormHref}>
+            <Link href={enquiryFormHref}>
               Start Your Project
               <ArrowRight />
-            </a>
+            </Link>
           </Button>
 
           <Button
@@ -87,10 +87,10 @@ export function HeroSection() {
             className="group w-full cursor-pointer rounded-full border-white/30 bg-transparent px-8 py-4 text-lg font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-white/10 sm:w-auto"
             asChild
           >
-            <a href="#features">
+            <Link href="#features">
               <Play />
               Explore Services
-            </a>
+            </Link>
           </Button>
         </div>
 

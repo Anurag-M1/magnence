@@ -90,37 +90,39 @@ button,
   }
 
   .animate-fade-in-nav {
-    animation: fade-in-nav 0.8s ease-out forwards;
+    animation: none;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 
   .animate-fade-in-hero {
-    animation: fade-in-hero 1s ease-out 0.2s forwards;
-    opacity: 0;
+    animation: none;
+    opacity: 1;
   }
 
   .animate-fade-in-badge {
-    animation: fade-in-badge 0.8s ease-out 0.4s forwards;
-    opacity: 0;
+    animation: none;
+    opacity: 1;
   }
 
   .animate-fade-in-heading {
-    animation: fade-in-heading 1s ease-out 0.6s forwards;
-    opacity: 0;
+    animation: none;
+    opacity: 1;
   }
 
   .animate-fade-in-subheading {
-    animation: fade-in-subheading 0.8s ease-out 0.8s forwards;
-    opacity: 0;
+    animation: none;
+    opacity: 1;
   }
 
   .animate-fade-in-buttons {
-    animation: fade-in-buttons 0.8s ease-out 1s forwards;
-    opacity: 0;
+    animation: none;
+    opacity: 1;
   }
 
   .animate-fade-in-trust {
-    animation: fade-in-trust 0.8s ease-out 1.2s forwards;
-    opacity: 0;
+    animation: none;
+    opacity: 1;
   }
 
   .animate-slide-left {
