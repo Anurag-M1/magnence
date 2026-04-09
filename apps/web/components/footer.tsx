@@ -3,7 +3,7 @@
 import type { ComponentProps, ReactNode } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle, Phone, Send, ShieldCheck, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Send, ShieldCheck, Twitter, Youtube } from "lucide-react";
 import { companyInfo, enquiryFormHref, legalPages, servicePages, socialLinks, supportPages } from "@/lib/site-data";
 
 type FooterSection = {
@@ -43,8 +43,8 @@ const socialIconMap = {
   Facebook,
   LinkedIn: Linkedin,
   Twitter,
+  YouTube: Youtube,
   Telegram: Send,
-  Reddit: MessageCircle,
 } as const;
 
 export function Footer() {
@@ -161,7 +161,23 @@ export function Footer() {
 }
 
 function SocialIconLink({ label, href }: { label: string; href: string }) {
-  const Icon = socialIconMap[label as keyof typeof socialIconMap] ?? MessageCircle;
+  const Icon = socialIconMap[label as keyof typeof socialIconMap];
+
+  if (label === "Reddit") {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={label}
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/5 text-white/80 transition hover:border-white/25 hover:bg-white/10 hover:text-white"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" className="size-4" aria-hidden="true">
+          <path d="M14.19 15.56c.17.17.17.44 0 .61-.58.58-1.51.86-2.84.86s-2.26-.28-2.84-.86a.43.43 0 0 1 .61-.61c.4.4 1.11.61 2.23.61s1.83-.21 2.23-.61a.43.43 0 0 1 .61 0Zm-4.88-2.44a.89.89 0 1 0-1.78 0 .89.89 0 0 0 1.78 0Zm7.16 0a.89.89 0 1 0-1.78 0 .89.89 0 0 0 1.78 0Zm4.28-1.05c0-1.36-.97-2.51-2.25-2.74a2.45 2.45 0 0 0-4.22-1.93c-.81-.18-1.66-.28-2.56-.3l.53-2.49 1.73.37a1.51 1.51 0 1 0 .14-.68l-2.03-.43a.44.44 0 0 0-.52.33l-.66 3.11c-.95.03-1.86.14-2.72.33a2.45 2.45 0 0 0-4.18 1.94A2.79 2.79 0 0 0 2 12.07c0 1.25.82 2.31 1.95 2.69-.03.18-.05.37-.05.56 0 2.95 3.26 5.35 7.28 5.35 4.02 0 7.28-2.4 7.28-5.35 0-.19-.02-.38-.05-.56a2.8 2.8 0 0 0 2.34-2.69ZM11.18 19.8c-3.54 0-6.41-2-6.41-4.48s2.87-4.48 6.41-4.48 6.41 2 6.41 4.48-2.87 4.48-6.41 4.48Z" />
+        </svg>
+      </a>
+    );
+  }
 
   return (
     <a
@@ -171,7 +187,7 @@ function SocialIconLink({ label, href }: { label: string; href: string }) {
       aria-label={label}
       className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/5 text-white/80 transition hover:border-white/25 hover:bg-white/10 hover:text-white"
     >
-      <Icon className="size-4" />
+      {Icon ? <Icon className="size-4" /> : null}
     </a>
   );
 }

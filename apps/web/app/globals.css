@@ -17,12 +17,28 @@
 html,
 body {
   overflow-x: hidden;
+  max-width: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+button,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 .text-white\/42 {
@@ -40,6 +56,32 @@ body {
 .text-white\/68,
 .text-white\/70 {
   color: rgb(255 255 255 / 0.86);
+}
+
+.text-slate-500 {
+  color: rgb(100 116 139);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .animate-slide-left,
+  .animate-slide-right {
+    animation-duration: 36s;
+  }
 }
 
 @layer utilities {

@@ -12,14 +12,14 @@ type PublicPageShellProps = {
 
 export function PublicPageShell({ children, showFooter = true, auroraSpeed = 0.72 }: PublicPageShellProps) {
   return (
-    <div className="min-h-screen overflow-hidden bg-black">
-      <main className="relative min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-x-clip bg-black text-white">
+      <main className="relative min-h-screen overflow-x-clip">
         <div className="fixed inset-0 h-full w-full">
           <Aurora colorStops={["#475569", "#94a3b8", "#ffffff"]} amplitude={1.1} blend={0.55} speed={auroraSpeed} />
         </div>
-        <div className="relative z-10">
+        <div className="relative z-10 text-white">
           <GlassmorphismNav />
-          <div className="pt-16">{children}</div>
+          <div className="pt-16 sm:pt-20">{children}</div>
           {showFooter ? <Footer /> : null}
           <WhatsAppFloatingButton />
         </div>

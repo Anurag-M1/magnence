@@ -308,6 +308,7 @@ export const socialLinks = [
   { label: "Facebook", href: "https://facebook.com/magnence" },
   { label: "LinkedIn", href: "https://linkedin.com/company/magnence" },
   { label: "Twitter", href: "https://twitter.com/magnence" },
+  { label: "YouTube", href: "https://youtube.com/@magnence" },
   { label: "Telegram", href: "https://t.me/magnence" },
   { label: "Reddit", href: "https://reddit.com/u/magnence" },
 ];

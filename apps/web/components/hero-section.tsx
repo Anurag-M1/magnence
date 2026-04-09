@@ -33,9 +33,9 @@ const Play = () => (
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[92vh] items-center justify-center px-4 pb-8 pt-20 sm:pb-10 sm:pt-24">
-      <div className="relative z-10 mx-auto max-w-4xl text-center animate-fade-in-hero">
-        <div className="mb-8 mt-12 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-md animate-fade-in-badge">
+    <section className="relative flex min-h-[88svh] items-center justify-center px-4 pb-8 pt-20 sm:min-h-[92vh] sm:pb-10 sm:pt-24">
+      <div className="relative z-10 mx-auto max-w-5xl text-center animate-fade-in-hero">
+        <div className="mb-6 mt-10 inline-flex flex-wrap items-center justify-center gap-y-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium text-white backdrop-blur-md animate-fade-in-badge sm:mb-8 sm:mt-12 sm:text-sm">
           <span className="mr-2 h-2 w-2 animate-pulse rounded-full bg-white/60"></span>
           <span>Strategize</span>
           <span className="mx-3 h-2 w-2 rounded-full bg-white/60" />
@@ -44,14 +44,14 @@ export function HeroSection() {
           <span>Scale</span>
         </div>
 
-        <h1 className="mb-6 text-3xl font-bold text-balance text-white sm:text-4xl md:text-6xl lg:text-7xl animate-fade-in-heading">
+        <h1 className="mb-6 text-3xl font-bold leading-tight text-balance text-white sm:text-4xl md:text-6xl lg:text-7xl animate-fade-in-heading">
           <span className="text-white">Build your</span>
           <br />
           <span className="mt-4 inline-flex flex-wrap items-center justify-center gap-2 sm:mt-6 md:mt-8">
             <span className="text-white">Next</span>
             <RotatingText
               texts={["AI Platform", "Intelligent Website", "Automation System", "Digital Product", "Technology Partner"]}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-white text-black overflow-hidden py-1 sm:py-1 md:py-2 justify-center rounded-lg shadow-lg"
+              mainClassName="justify-center overflow-hidden rounded-lg bg-white px-2 py-1 text-black shadow-lg sm:px-2 md:px-3 md:py-2"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -64,15 +64,15 @@ export function HeroSection() {
           </span>
         </h1>
 
-        <p className="mx-auto mb-8 max-w-sm px-4 text-base font-light leading-relaxed text-white text-balance sm:mb-12 sm:max-w-3xl sm:px-0 sm:text-xl md:text-2xl animate-fade-in-subheading">
+        <p className="mx-auto mb-8 max-w-sm px-2 text-base font-light leading-relaxed text-white text-balance sm:mb-12 sm:max-w-3xl sm:px-0 sm:text-xl md:text-2xl animate-fade-in-subheading">
           Magnence is an AI-led technology services company building intelligent websites, automation workflows, web
           apps, digital products, and growth systems for modern businesses.
         </p>
 
-        <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:mb-10 sm:flex-row animate-fade-in-buttons">
+        <div className="mb-8 flex flex-col items-stretch justify-center gap-4 sm:mb-10 sm:flex-row sm:items-center animate-fade-in-buttons">
           <Button
             size="lg"
-            className="group relative cursor-pointer overflow-hidden rounded-full bg-white px-8 py-4 text-lg font-medium text-black transition-all duration-300 hover:scale-105 hover:bg-gray-50 hover:shadow-lg"
+            className="group relative w-full cursor-pointer overflow-hidden rounded-full bg-white px-8 py-4 text-lg font-medium text-black transition-all duration-300 hover:scale-105 hover:bg-gray-50 hover:shadow-lg sm:w-auto"
             asChild
           >
             <a href={enquiryFormHref}>
@@ -84,7 +84,7 @@ export function HeroSection() {
           <Button
             variant="outline"
             size="lg"
-            className="group cursor-pointer rounded-full border-white/30 bg-transparent px-8 py-4 text-lg font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-white/10"
+            className="group w-full cursor-pointer rounded-full border-white/30 bg-transparent px-8 py-4 text-lg font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-white/10 sm:w-auto"
             asChild
           >
             <a href="#features">
@@ -122,7 +122,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="mb-4 overflow-hidden px-4 text-center sm:hidden animate-fade-in-trust">
+        <div className="mb-4 overflow-hidden px-2 text-center sm:hidden animate-fade-in-trust">
           <p className="mb-4 text-sm text-white/90">For teams that expect disciplined AI-led execution</p>
           <div className="relative mx-auto w-full max-w-sm space-y-3 overflow-hidden">
             <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-8 bg-gradient-to-r from-black to-transparent"></div>
