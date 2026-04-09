@@ -149,7 +149,7 @@ export function GlassmorphismNav() {
 
 
 
-      <div className="relative z-[71] md:hidden">
+      <div className="absolute left-0 top-full w-full z-[71] md:hidden">
         <div
           id="mobile-nav-panel"
           className={`mx-auto mt-2 w-[92vw] max-w-sm transform-gpu transition-all duration-200 ease-out ${
