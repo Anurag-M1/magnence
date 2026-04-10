@@ -21,7 +21,7 @@ export default function DownloadsPage() {
             Download access across <span className="font-medium italic">mobile and desktop platforms</span>
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/68">
-            The Magnence application is being rolled out across Android, iOS, Windows, macOS, and Linux. Use the platform cards below to request the right build for your workflow.
+            The Magnence application is available as a direct download for Android and macOS. For iOS and other desktop platforms, use the request links to join our testing tracks.
           </p>
         </div>
 
@@ -44,9 +44,15 @@ export default function DownloadsPage() {
                 <h2 className="text-2xl font-medium text-white">{platform.name}</h2>
               </div>
               <p className="mt-4 text-sm leading-8 text-white/66">{platform.description}</p>
-              <Link href={platform.href} className="mt-6 inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-slate-100">
-                {platform.ctaLabel}
-              </Link>
+              {platform.href.startsWith('http') ? (
+                <a href={platform.href} className="mt-6 inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-slate-100" target="_blank" rel="noopener noreferrer">
+                  {platform.ctaLabel}
+                </a>
+              ) : (
+                <Link href={platform.href} className="mt-6 inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-slate-100">
+                  {platform.ctaLabel}
+                </Link>
+              )}
             </article>
           ))}
         </div>
@@ -54,16 +60,16 @@ export default function DownloadsPage() {
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {[
             {
-              title: "Who downloads are for",
-              text: "These builds are intended for clients, internal teams, and stakeholders who need direct access to project visibility and communication workflows.",
+              title: "Direct Downloads",
+              text: "Our Android APK and macOS builds are provided directly. These artifacts are signed and ready for installation on your primary workspace devices.",
             },
             {
-              title: "How access works",
-              text: "Use the enquiry form to request the platform you need. We confirm availability, environment fit, and the right release track before sharing access.",
+              title: "Early Access tracks",
+              text: "For platform builds still in TestFlight or Technical Preview, use the inquiry form. We'll verify your environment and share the right release tracked for your team.",
             },
             {
-              title: "What to mention",
-              text: "Include your device, operating system, team size, and what you want to do inside the app so we can route the right build faster.",
+              title: "Support & Updates",
+              text: "If you have issues with a specific build or need a different architectural package (e.g., Linux .deb), reach out via our support channels or directly within the portal.",
             },
           ].map((item) => (
             <section key={item.title} className="rounded-[1.75rem] border border-white/12 bg-white/[0.04] p-6 backdrop-blur-md">

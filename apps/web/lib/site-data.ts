@@ -268,10 +268,10 @@ export const careerRoles = [
 export const downloadPlatforms = [
   {
     name: "Android",
-    availability: "Private beta",
+    availability: "v1.0 Release",
     description: "Client portal, notifications, and project visibility for Android devices.",
-    ctaLabel: "Request Android build",
-    href: enquiryFormHref,
+    ctaLabel: "Download APK",
+    href: "https://github.com/Anurag-M1/magnence/releases/download/v1.0/Magnence.apk",
   },
   {
     name: "iOS",
@@ -289,10 +289,10 @@ export const downloadPlatforms = [
   },
   {
     name: "macOS",
-    availability: "Desktop preview",
+    availability: "v1.0 Release",
     description: "Native desktop access for teams managing projects, communication, and review cycles.",
-    ctaLabel: "Request macOS build",
-    href: enquiryFormHref,
+    ctaLabel: "Download for Mac (ZIP)",
+    href: "https://github.com/Anurag-M1/magnence/releases/download/v1.0/Magnence.app.zip",
   },
   {
     name: "Linux",
@@ -304,13 +304,9 @@ export const downloadPlatforms = [
 ];
 
 export const socialLinks = [
-  { label: "Instagram", href: "https://instagram.com/magnence" },
-  { label: "Facebook", href: "https://facebook.com/magnence" },
-  { label: "LinkedIn", href: "https://linkedin.com/company/magnence" },
-  { label: "Twitter", href: "https://twitter.com/magnence" },
-  { label: "YouTube", href: "https://youtube.com/@magnence" },
-  { label: "Telegram", href: "https://t.me/magnence" },
-  { label: "Reddit", href: "https://reddit.com/u/magnence" },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61572048443565" },
+  { label: "Twitter", href: "https://x.com/magnenceindia" },
+  { label: "Reddit", href: "https://www.reddit.com/user/MagnenceIndia/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" },
 ];
 
 export const legalPages: LegalPage[] = [
