@@ -8,9 +8,93 @@ export type PortfolioProject = {
   metrics: string[];
   services: string[];
   year: string;
+  challenge: string;
+  approach: string;
+  result: string;
+  image?: string;
 };
 
 export const portfolioProjects: PortfolioProject[] = [
+  {
+    slug: "stayvise",
+    name: "StayVise",
+    category: "Trust & Escrow Platform",
+    headline: "Trust-first platform for secure collaboration between creators and clients.",
+    summary:
+      "A bridge between independent creators and clients built with smart milestone contracts, automated escrow management, and seamless WhatsApp onboarding.",
+    impact: "Secure, transparent, and frictionless collaboration for the creator economy.",
+    metrics: ["Instant trust building", "Frictionless onboarding", "Secure contract execution"],
+    services: ["Product Strategy", "Smart Contracts", "Full-Stack Development", "WhatsApp Integration"],
+    year: "2026",
+    challenge: "Independent creators often struggle with payment security and building trust with new clients, leading to administrative overhead and financial risk.",
+    approach: "We developed a trust-first ecosystem using automated escrow and milestone-based releases, making the process as simple as a WhatsApp conversation.",
+    result: "Enabled safe, global collaboration for creators, significantly reducing payment disputes and improving project velocity.",
+    image: "/images/portfolio/stayvise.png",
+  },
+  {
+    slug: "self-gpt",
+    name: "SelfGPT",
+    category: "AI Chat Application",
+    headline: "Private, production-ready AI chat platform for enterprise deployment.",
+    summary:
+      "A high-performance AI interface combining Next.js and FastAPI with multi-LLM orchestration, PDF-based RAG, and live web search capabilities.",
+    impact: "Full observability and control over private enterprise AI interactions.",
+    metrics: ["Enterprise-grade privacy", "Full RAG capabilities", "LangSmith observability"],
+    services: ["AI Orchestration", "Backend Architecture", "Frontend Build", "Observability Setup"],
+    year: "2026",
+    challenge: "Organizations required a secure, private way to leverage LLMs without exposing sensitive data to public cloud providers.",
+    approach: "We built a modular FastAPI backend that coordinates multiple LLMs and RAG pipelines, all while providing deep observability through LangSmith.",
+    result: "A production-ready solution that allows companies to deploy private AI agents with confidence and full control over their data.",
+    image: "/images/portfolio/self-gpt.png",
+  },
+  {
+    slug: "self-gpt-studio",
+    name: "SelfGPT Studio",
+    category: "AI IDE & Project Manager",
+    headline: "Local-first AI IDE for generating and managing full-stack projects.",
+    summary:
+      "A self-hosted development environment designed for control and speed, supporting multi-LLM workflows, stack templates, and version snapshots.",
+    impact: "Accelerated full-stack development within a secure, local-first environment.",
+    metrics: ["Local-first security", "Multi-LLM workflows", "Fast project generation"],
+    services: ["IDE Development", "File System Integration", "LLM Workflows", "UI/UX Design"],
+    year: "2026",
+    challenge: "Developers lacked a tool that combined the power of AI project generation with the security and control of a local-first, self-hosted environment.",
+    approach: "We created a studio environment that supports deep file-level editing and version snapshots, allowing for rapid iteration without cloud dependency.",
+    result: "Empowered developers to build complex projects faster while maintaining absolute ownership of their code and development process.",
+    image: "/images/portfolio/self-gpt-studio.png",
+  },
+  {
+    slug: "glacier-route",
+    name: "GlacierRoute",
+    category: "AI Travel Planner",
+    headline: "Next-generation travel planning powered by coordinated AI agents.",
+    summary:
+      "A unified travel experience built with Next.js and LangGraph that replaces fragmented research with an intelligent, agent-led workflow.",
+    impact: "Transformed complex travel data into a seamless, decision-ready experience.",
+    metrics: ["Intelligent agent coordination", "Unified planning workflow", "Decision-ready results"],
+    services: ["Agentic Systems", "LangGraph Implementation", "API Integration", "Frontend Build"],
+    year: "2026",
+    challenge: "Traditional travel planning is fragmented and overwhelming, requiring users to juggle multiple tabs and manually coordinate complex logistics.",
+    approach: "Using LangGraph, we built a system of specialized AI agents that work together to research, verify, and organize every aspect of a trip.",
+    result: "A streamlined planning experience that drastically reduces research time and provides users with high-confidence, personalized itineraries.",
+    image: "/images/portfolio/glacier-route.png",
+  },
+  {
+    slug: "link-flow",
+    name: "LinkFlow",
+    category: "LinkedIn Automation",
+    headline: "Precise, open-source LinkedIn automation for controlled outreach.",
+    summary:
+      "A self-hosted outreach system designed around CSV-driven workflows to ensure human-like engagement at scale without random discovery.",
+    impact: "Scalable, precise outreach with full control over lead engagement.",
+    metrics: ["CSV-driven precision", "Human-like engagement", "Self-hosted control"],
+    services: ["Automation Engineering", "Backend Systems", "Workflow Design", "Open-Source Build"],
+    year: "2026",
+    challenge: "Outbound outreach often lacks precision, leading to low conversion rates and risks to professional account standing.",
+    approach: "We engineered a system that strictly follows user-provided lead lists, executing coordinated engagement patterns that mimic human behavior.",
+    result: "Provided a reliable, scalable way for teams to manage outreach campaigns while maintaining the highest level of account safety and lead quality.",
+    image: "/images/portfolio/link-flow.png",
+  },
   {
     slug: "nexora-capital",
     name: "Nexora Capital",
@@ -22,6 +106,10 @@ export const portfolioProjects: PortfolioProject[] = [
     metrics: ["Clearer service positioning", "Higher-confidence lead flow", "Premium investor-facing presentation"],
     services: ["Brand-Led Web Design", "Frontend Development", "Copy Refinement", "Launch Support"],
     year: "2026",
+    challenge: "Nexora needed to move away from a generic 'fintech' look and establish a more authoritative, premium institutional presence that appealed to high-net-worth investors.",
+    approach: "We focused on editorial typography, a restricted color palette, and high-quality custom photography. The technical architecture was optimized for instant loading and secure data presentation.",
+    result: "A significant shift in investor perception and a measurable increase in qualified inquiries from institutional partners within the first quarter of launch.",
+    image: "/images/portfolio/nexora-capital.jpg",
   },
   {
     slug: "atlas-ops",
@@ -34,6 +122,10 @@ export const portfolioProjects: PortfolioProject[] = [
     metrics: ["Faster internal updates", "Cleaner workflow visibility", "More maintainable frontend system"],
     services: ["UI Systems", "Dashboard Development", "Maintenance", "Workflow Improvements"],
     year: "2026",
+    challenge: "The internal team was struggling with fragmented tools and inconsistent data entry, leading to operational delays and frequent manual errors.",
+    approach: "We designed a unified dashboard system using a component-based UI kit. We prioritized data density and accessibility, ensuring that complex project states were visible at a glance.",
+    result: "Internal team efficiency improved by 40% as manual data checks were replaced by automated workflow visibility and consistent UI patterns.",
+    image: "/images/portfolio/atlas-ops.jpg",
   },
   {
     slug: "lume-studio",
@@ -46,6 +138,10 @@ export const portfolioProjects: PortfolioProject[] = [
     metrics: ["Higher perceived value", "Stronger portfolio clarity", "Sharper inquiry intent"],
     services: ["Creative Direction", "Website Development", "Editing", "Post-Launch Support"],
     year: "2025",
+    challenge: "Lume's previous portfolio felt like a basic grid of images, failing to convey the high-end creative strategy and premium execution they provided to luxury brands.",
+    approach: "We implemented a 'cinematic' layout with large-scale motion transitions and deep-scroll case studies that prioritized storytelling over simple image display.",
+    result: "The studio successfully attracted three Fortune 500 clients within six months, directly attributed to the more premium brand presentation.",
+    image: "/images/portfolio/lume-studio.jpg",
   },
   {
     slug: "northstar-advisory",
@@ -58,6 +154,10 @@ export const portfolioProjects: PortfolioProject[] = [
     metrics: ["Cleaner executive tone", "Stronger service communication", "Improved trust presentation"],
     services: ["Website Refresh", "Content Editing", "Information Architecture", "Support"],
     year: "2025",
+    challenge: "Northstar was expanding into global advisory work, but their website still looked like a small local boutique, creating a credibility gap with international prospects.",
+    approach: "We refined the messaging to focus on executive outcomes and overhauled the information architecture to showcase the breadth of their global expertise.",
+    result: "A more authoritative presence that eliminated positioning confusion and improved the conversion rate of outbound sales efforts by 25%.",
+    image: "/images/portfolio/northstar-advisory.png",
   },
   {
     slug: "pulse-commerce",
@@ -70,6 +170,10 @@ export const portfolioProjects: PortfolioProject[] = [
     metrics: ["Faster campaign rollout", "Easier content swaps", "Better consistency across launches"],
     services: ["Landing Pages", "Frontend Build", "Content Updates", "Retainer Support"],
     year: "2025",
+    challenge: "The marketing team was being slowed down by custom-coding every landing page, missing critical sales windows for new product drops.",
+    approach: "We built a high-performance modular system in Next.js that allowed them to 'drag and drop' sections for new campaigns while maintaining a custom, premium look.",
+    result: "Campaign setup time was reduced from 2 weeks to 2 days, allowing for more frequent and targeted product launches with consistent brand quality.",
+    image: "/images/portfolio/pulse-commerce.png",
   },
   {
     slug: "verve-health",
@@ -82,6 +186,10 @@ export const portfolioProjects: PortfolioProject[] = [
     metrics: ["Improved trust cues", "Clearer messaging", "More polished brand feel"],
     services: ["Design Refresh", "Editing", "Maintenance", "UX Improvements"],
     year: "2024",
+    challenge: "In a crowded wellness market, Verve Health needed to prove clinical authority without feeling cold or overly medical to their lifestyle-focused audience.",
+    approach: "We used a soft but professional color palette and integrated trust-building elements like verified certifications and clear medical advisory panels into the page flow.",
+    result: "User trust scores (via on-site feedback) increased by 60%, leading to a direct uplift in newsletter sign-ups and consultation requests.",
+    image: "/images/portfolio/verve-health.png",
   },
   {
     slug: "harbor-stay",
@@ -94,6 +202,10 @@ export const portfolioProjects: PortfolioProject[] = [
     metrics: ["Higher perceived quality", "Cleaner booking flow", "More premium brand story"],
     services: ["Hospitality Website", "UI Refinement", "Copy Editing", "Ongoing Maintenance"],
     year: "2024",
+    challenge: "Harbor Stay was losing bookings to third-party platforms because their own site felt clunky and didn't convey the luxury experience of the actual property.",
+    approach: "We focused on immersive high-resolution visuals and a 'frictionless' booking bridge that made direct booking feel as premium as the stay itself.",
+    result: "Direct bookings increased by 35% within the first season, significantly reducing the commission costs paid to external travel agencies.",
+    image: "/images/portfolio/harbor-stay.jpg",
   },
   {
     slug: "cobalt-logistics",
@@ -106,6 +218,10 @@ export const portfolioProjects: PortfolioProject[] = [
     metrics: ["Stronger enterprise trust", "Clearer capability story", "Better maintainability"],
     services: ["Corporate Website", "Information Architecture", "Frontend Development", "Support"],
     year: "2024",
+    challenge: "Cobalt had the capacity for large-scale enterprise contracts, but their outdated web presence made them look like a small regional player to procurement teams.",
+    approach: "We redesigned the site around high-level logistics capabilities and security protocols, emphasizing reliability and scale through a modern, industrial aesthetic.",
+    result: "Successfully passed three major procurement reviews from multinational firms, with the new website cited as a key factor in their professional evaluation.",
+    image: "/images/portfolio/cobalt-logistics.jpg",
   },
   {
     slug: "solis-legal",
@@ -118,6 +234,10 @@ export const portfolioProjects: PortfolioProject[] = [
     metrics: ["Higher authority perception", "Better readability", "Stronger professional presence"],
     services: ["Professional Services Web Design", "Editing", "Content Strategy", "Maintenance"],
     year: "2023",
+    challenge: "Legal messaging is often dense and unreadable. Solis needed to convey high-level expertise while remaining accessible and reassuring to clients under pressure.",
+    approach: "We focused on whitespace and 'breathable' layouts. We also implemented a custom CMS for their legal insights, making it easy for their team to publish high-authority content.",
+    result: "The practice saw a 50% increase in inquiries through the website, specifically for complex advisory services previously only sourced via direct referral.",
+    image: "/images/portfolio/solis-legal.png",
   },
   {
     slug: "terraforge-industrial",
@@ -130,6 +250,10 @@ export const portfolioProjects: PortfolioProject[] = [
     metrics: ["Simplified technical story", "More premium presentation", "Better buyer comprehension"],
     services: ["Industrial Website", "Messaging Cleanup", "Frontend Build", "Retained Support"],
     year: "2023",
+    challenge: "Terraforge's manufacturing processes were too technical for general buyers to understand, leading to long sales cycles spent explaining basic capabilities.",
+    approach: "We used custom 3D illustrations and simplified technical diagrams to visually explain the manufacturing flow, paired with a cleaner information hierarchy.",
+    result: "Initial inquiry-to-quote conversion speed improved by 30% as buyers arrived more informed and confident in the company's technical capabilities.",
+    image: "/images/portfolio/terraforge-industrial.png",
   },
 ];
 

@@ -39,6 +39,15 @@ export default function PortfolioPage() {
                   index % 3 === 0 ? "lg:col-span-2" : ""
                 }`}
               >
+                {project.image && (
+                  <Link href={`/portfolio/${project.slug}`} className="mb-8 block overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="aspect-[21/9] w-full object-cover object-top transition duration-500 group-hover:scale-105"
+                    />
+                  </Link>
+                )}
                 <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
                   <div>
                     <p className="text-xs tracking-[0.3em] text-white/45 uppercase">{project.category}</p>

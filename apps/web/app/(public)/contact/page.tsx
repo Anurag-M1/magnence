@@ -9,7 +9,6 @@ const socialIconMap = {
   LinkedIn: Linkedin,
   Twitter,
   Telegram: Send,
-  Reddit: MessageCircle,
 } as const;
 
 export default function ContactPage() {

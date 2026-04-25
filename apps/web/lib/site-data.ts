@@ -53,7 +53,7 @@ export const publicNavigation: NavItem[] = [
   { href: "/portfolio", label: "Portfolio" },
   { href: "/how-we-work", label: "How We Work" },
   { href: "/downloads", label: "Downloads" },
-  { href: "/contact", label: "Contact" },
+  { href: "/escrow", label: "Escrow Service" },
 ];
 
 export const servicePages: ServicePage[] = [
@@ -306,7 +306,8 @@ export const downloadPlatforms = [
 export const socialLinks = [
   { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61572048443565" },
   { label: "Twitter", href: "https://x.com/magnenceindia" },
-  { label: "Reddit", href: "https://www.reddit.com/user/MagnenceIndia/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/magnence/" },
+  { label: "Instagram", href: "https://www.instagram.com/magnenceindia/" },
 ];
 
 export const legalPages: LegalPage[] = [

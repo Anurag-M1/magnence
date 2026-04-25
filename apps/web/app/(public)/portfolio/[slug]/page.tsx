@@ -27,6 +27,16 @@ export default function PortfolioDetailPage({ params }: PortfolioDetailPageProps
           Back to Portfolio
         </Link>
 
+        {project.image && (
+          <div className="mt-12 overflow-hidden rounded-[2.5rem] border border-white/12 bg-white/5">
+            <img
+              src={project.image}
+              alt={project.name}
+              className="w-full object-cover object-top transition duration-700 hover:scale-[1.01]"
+            />
+          </div>
+        )}
+
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
           <div>
             <p className="text-sm tracking-[0.3em] text-white/45 uppercase">{project.category}</p>
@@ -59,22 +69,22 @@ export default function PortfolioDetailPage({ params }: PortfolioDetailPageProps
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+          <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition hover:border-white/20">
             <h2 className="text-lg font-semibold text-white">Challenge</h2>
             <p className="mt-3 text-sm leading-7 text-white/66">
-              The brand needed a clearer digital presentation that felt more intentional, more premium, and easier for decision-makers to understand.
+              {project.challenge}
             </p>
           </div>
-          <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+          <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition hover:border-white/20">
             <h2 className="text-lg font-semibold text-white">Approach</h2>
             <p className="mt-3 text-sm leading-7 text-white/66">
-              Magnence aligned structure, messaging, and delivery priorities so the work improved both perception and practical usability.
+              {project.approach}
             </p>
           </div>
-          <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+          <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 transition hover:border-white/20">
             <h2 className="text-lg font-semibold text-white">Result</h2>
             <p className="mt-3 text-sm leading-7 text-white/66">
-              The final experience made the business easier to trust, easier to navigate, and easier to evolve after launch.
+              {project.result}
             </p>
           </div>
         </div>

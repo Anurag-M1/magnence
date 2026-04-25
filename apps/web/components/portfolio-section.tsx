@@ -57,6 +57,15 @@ export function PortfolioSection() {
               key={project.slug}
               className="fade-in-element group translate-y-8 rounded-[2rem] border border-white/12 bg-white/[0.04] p-7 opacity-0 backdrop-blur-md transition-all duration-1000 ease-out hover:border-white/20 hover:bg-white/[0.07]"
             >
+              {project.image && (
+                <Link href={`/portfolio/${project.slug}`} className="mb-6 block overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="aspect-video w-full object-cover object-top transition duration-500 group-hover:scale-105"
+                  />
+                </Link>
+              )}
               <div className="mb-8 flex items-start justify-between gap-4">
                 <div>
                   <p className="text-xs tracking-[0.3em] text-white/45 uppercase">{project.category}</p>
